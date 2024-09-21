@@ -96,8 +96,8 @@ const AnnualConference: NextPage<AnnualConfProps> = ({
 
 export const getStaticProps: GetStaticProps<AnnualConfProps> = async () => {
   const [carouselResponse, conferenceInfoResponse] = await Promise.all([
-    fetch("http://localhost:3031/carousel"),
-    fetch("http://localhost:3031/conferencePage"),
+    fetch("https://json-server-project03.onrender.com/carousel"),
+    fetch("https://json-server-project03.onrender.com/conferencePage"),
   ]);
 
   const carouselItems: CarouselItemData[] = await carouselResponse.json();

@@ -40,7 +40,7 @@ const Signup: NextPage<SignupProps> = ({ signupData }) => {
 
 export const getStaticProps: GetStaticProps<SignupProps> = async () => {
   const [signupResponse] = await Promise.all([
-    fetch("http://localhost:3031/signupPage"),
+    fetch("https://json-server-project03.onrender.com/signupPage"),
   ]);
 
   const signupData: SignupData[] = await signupResponse.json();

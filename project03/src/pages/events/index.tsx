@@ -203,7 +203,7 @@ const AllEvents: NextPage<AllEventsProps> = ({ eventsInfo }) => {
 
 export const getStaticProps: GetStaticProps<AllEventsProps> = async () => {
   const [eventsInfoResponse] = await Promise.all([
-    fetch("http://localhost:3031/events"),
+    fetch("https://json-server-project03.onrender.com/events"),
   ]);
 
   const eventsInfo: EventsPage[] = await eventsInfoResponse.json();

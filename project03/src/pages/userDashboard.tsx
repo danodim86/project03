@@ -20,8 +20,8 @@ const UserDashboard: NextPage<UserDashboardProps> = ({carouselItems, userDashboa
 export const getStaticProps: GetStaticProps<UserDashboardProps> = async () => {
   const [carouselResponse, userDashboardInfoResponse] =
     await Promise.all([
-      fetch("http://localhost:3031/carousel"),
-      fetch("http://localhost:3031/userDashboardInfo")
+      fetch("https://json-server-project03.onrender.com/carousel"),
+      fetch("https://json-server-project03.onrender.com/userDashboardInfo")
     ]);
 
   const carouselItems: CarouselItemData[] = await carouselResponse.json();

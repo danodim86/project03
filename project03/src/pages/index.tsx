@@ -109,9 +109,9 @@ export default function Home({
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const [carouselResponse, cardsResponse, cardsResponseSet1] =
     await Promise.all([
-      fetch("http://localhost:3031/carousel"),
-      fetch("http://localhost:3031/homepageCards"),
-      fetch("http://localhost:3031/homepageCardsSet1"),
+      fetch("https://json-server-project03.onrender.com/carousel"),
+      fetch("https://json-server-project03.onrender.com/homepageCards"),
+      fetch("https://json-server-project03.onrender.com/homepageCardsSet1"),
     ]);
 
   const carouselItems: CarouselItemData[] = await carouselResponse.json();

@@ -191,8 +191,8 @@ const AllBlogs: NextPage<AllBlogsProps> = ({
 
 export const getStaticProps: GetStaticProps<AllBlogsProps> = async () => {
   const [carouselResponse, blogsResponse] = await Promise.all([
-    fetch("http://localhost:3031/carousel"),
-    fetch("http://localhost:3031/blogsPage"),
+    fetch("https://json-server-project03.onrender.com/carousel"),
+    fetch("https://json-server-project03.onrender.com/blogsPage"),
   ]);
 
   const carouselItems: CarouselItemData[] = await carouselResponse.json();

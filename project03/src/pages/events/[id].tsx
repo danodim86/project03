@@ -69,8 +69,8 @@ const EventItemPage: NextPage<EventItemPageProps> = ({
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { id } = context.params!;
   const [carouselResponse, eventInfoResponse] = await Promise.all([
-    fetch("http://localhost:3031/carousel"),
-    fetch(`http://localhost:3031/eventsPosts/${id}`),
+    fetch("https://json-server-project03.onrender.com/carousel"),
+    fetch(`https://json-server-project03.onrender.com/eventsPosts/${id}`),
   ]);
 
   if (!carouselResponse.ok) {
@@ -96,7 +96,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const similarEventIds = eventInfoData.similarEvents;
 
   const similarEventsPromises = similarEventIds.map(async (blogId: string) => {
-    const response = await fetch(`http://localhost:3031/eventsPosts/${blogId}`);
+    const response = await fetch(`https://json-server-project03.onrender.com/eventsPosts/${blogId}`);
 
     if (!response.ok) {
       console.error(
