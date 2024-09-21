@@ -1,0 +1,89 @@
+.benefitsOfSigningContainer{
+  width: 100%;
+  height: 110vh;
+  position: relative;
+  margin-top: 120px;
+  .dottedContainerBenefitsOne{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: radial-gradient(circle, #696969 1.5px, transparent 1.5px);
+    background-size: 15px 15px;
+    width: 150px;
+    height: 180px;
+    clip-path: polygon(0% 0%, 100% 0%, 60% 100%, 0% 100%);
+  }
+  .dottedContainerBenefitsTwo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: radial-gradient(circle, #696969 1.5px, transparent 1.5px);
+    background-size: 15px 15px;
+    width: 220px;
+    height: 220px;
+  }
+  .dottedContainerBenefitsThree{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: radial-gradient(circle, #696969 1.5px, transparent 1.5px);
+    background-size: 15px 15px;
+    width: 150px;
+    height: 180px;
+    clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  .image1Container{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80vh !important;
+    height: 40vh !important;
+    img{
+     
+      border-top-left-radius: 40vh;
+      border-top-right-radius: 40vh;
+    }
+  }
+  .image2Container{
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    width: 80vh !important;
+    height: 40vh !important;
+    img{  
+      border-bottom-left-radius: 40vh;
+      border-bottom-right-radius: 40vh;
+    }
+  }
+
+  .corporateListContainer, .individualListContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: absolute;
+    width: 30vw;
+    h2{
+      font-size: 40px;
+      line-height: 50px;
+    }
+    ul{
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-size: 14px;
+    }
+  }
+
+  .corporateListContainer{
+    left: 10%;
+    bottom: 6%;
+  }
+
+  .individualListContainer{
+    right: 10%;
+    top: 6%;
+  }
+}

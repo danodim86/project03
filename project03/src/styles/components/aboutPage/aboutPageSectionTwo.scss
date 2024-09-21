@@ -1,0 +1,54 @@
+.aboutSectionTwoContainer {
+  width: 80%;
+  margin: 150px auto;
+  display: flex;
+  justify-content: space-between;
+  .imageContainer {
+    position: relative;
+    flex-basis: 25%;
+    .imageInnerContainer {
+      width: 100%;
+      position: relative;
+      height: 300px;
+      img {
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+      }
+    }
+
+    .dottedPatternAboutSectionTwo {
+      background-image: radial-gradient(circle, #acacac 2px, transparent 2px);
+      background-size: 20px 20px;
+      width: 30vw;
+      left: -10vw;
+      bottom: 0;
+      height: 220px;
+      position: absolute;
+      clip-path: polygon(0% 0%, 20% 0%, 20% 30%, 100% 30%, 100% 100%, 0% 100%);
+    }
+  }
+
+  .contentContainer{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 72%;
+    h2{
+      font-size: 45px;
+      line-height: 55px;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    h3{
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 40px;
+      color: #e87b22;
+    }
+    p{
+      font-size: 13px;
+      &:not(:last-child){
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

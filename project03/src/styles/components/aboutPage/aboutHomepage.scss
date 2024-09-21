@@ -1,0 +1,42 @@
+.aboutHomepageContent{
+  position: absolute;
+  z-index: 20;
+  top: 20%;
+  left: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+
+  .aboutHeading{
+    background-color: white;
+    padding: 25px 30px;
+    border-radius: 10px;
+    width: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    h1{
+      font-size: 45px;
+      line-height: 55px;
+      font-weight: 700;
+    }
+    p{
+      font-size: 18px;
+    }
+  }
+  .aboutHomepageButton{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 25px;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    border-radius: 40px;
+    p{
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+}

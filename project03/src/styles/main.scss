@@ -1,0 +1,72 @@
+@import "./reboot.scss";
+
+//reusable and index page
+@import "./components/reusableScss/header.scss";
+@import "./components/reusableScss/orangeBtn.scss";
+@import "./components/reusableScss/heroSection.scss";
+@import "./components/reusableScss/carousel.scss";
+@import "./components/indexScss/homePageSec1.scss";
+@import "./components/indexScss/homePageSec2.scss";
+@import "./components/reusableScss/cards.scss";
+@import "./components/indexScss/homePageSec3.scss";
+@import "./components/indexScss/homePageSec4.scss";
+@import "./components/reusableScss/linkBtn.scss";
+@import "./components/reusableScss/footer.scss";
+
+// blog index
+@import "./components/blogs/heroSection.scss";
+@import "./components/blogs/breadCrumbsNav.scss";
+@import "./components/blogs/getPointsInfoContainer.scss";
+@import "./components/blogs/filters.scss";
+@import "./components/blogs/newestBlogs.scss";
+@import "./components/blogs/indexBlogs.scss";
+
+//blog page
+@import "./components/blogPage/heroSection.scss";
+@import "./components/blogPage/blogItemPageGeneral.scss";
+@import "./components/blogPage/blogItemContent.scss";
+
+//user dashboard
+@import "./components/userDashboard/starterComponent.scss";
+@import "./components/userDashboard/userStats.scss";
+@import "./components/userDashboard/calendarComponent.scss";
+@import "./components/userDashboard/calendar.scss";
+
+//signup
+@import "./components/signup/homepageSignup.scss";
+@import "./components/signup/signupRegister.scss";
+@import "./components/signup/benefitsOfsigningUp.scss";
+@import "./components/signup/popup.scss";
+
+//annual conference
+@import "./components/annualCon/heroSection.scss";
+@import "./components/annualCon/sectionOne.scss";
+@import "./components/annualCon/sectionTwo.scss";
+@import "./components/annualCon/specialGuests.scss";
+@import "./components/annualCon/dottedPatternAfterSpeakers.scss";
+@import "./components/annualCon/agenda.scss";
+@import "./components/annualCon/guestsQuotes.scss";
+@import "./components/annualCon/packetWinner.scss";
+@import "./components/annualCon/mapOfLocation.scss";
+
+
+//about page
+@import "./components/aboutPage/aboutHomepage.scss";
+@import "./components/aboutPage/aboutBreadCrumbs.scss";
+@import "./components/aboutPage/aboutPageSectionOne.scss";
+@import "./components/aboutPage/aboutPageSectionTwo.scss";
+@import "./components/aboutPage/aboutPageSectionThree.scss";
+
+
+//events
+@import "./components/events/eventsIndex.scss";
+@import "./components/events/eventsHeroSection.scss";
+@import "./components/events/eventsBreadCrumbs.scss";
+@import "./components/events/eventsCalendar.scss";
+
+//event individual item
+@import "./components/eventItem/heroSection.scss";
+@import "./components/eventItem/eventAboutComponent.scss";
+@import "./components/eventItem/eventAgenda.scss";
+@import "./components/eventItem/eventSpeakersComponent.scss";
+@import "./components/eventItem/eventPricesComponent.scss";

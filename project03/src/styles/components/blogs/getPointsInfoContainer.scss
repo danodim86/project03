@@ -1,0 +1,48 @@
+.getPointsInfoContainer{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .imageContainer{
+    flex-basis: 26%;
+    height: 280px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    position: relative;
+
+    .dottedPattern{
+      background-image: radial-gradient(circle, #696969 1px, transparent 1px);
+      background-size: 10px 10px;
+      height: 90px;
+      width: 90px;
+      position: absolute;
+      z-index: 3;
+      top: 85%;
+      left: 80%;
+    }
+  }
+  .contentContainer{
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    h2{
+      font-size: 40px;
+      line-height: 45px;
+      font-weight: 500;
+      span{
+        color: #e87b22;
+      }
+    }
+    p{
+      font-size: 13px;
+      color: lightgray;
+      font-weight: 700;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+.eventSpeakersContainer {
+  width: 80%;
+  margin: 200px auto;
+  display: flex;
+  justify-content: space-between;
+
+  .titleContainer {
+    flex-basis: 48%;
+    position: relative;
+
+    h2{
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 50px;
+    }
+
+    .eventSpeakersDottedPattern {
+      position: absolute;
+      z-index: 10;
+      height: 240px;
+      width: 48.4vw;
+      left: -10vw;
+      bottom: 0%;
+      background-image: radial-gradient(circle, #acacac 2px, transparent 2px);
+      background-size: 20px 20px;
+      clip-path: polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%);
+    }
+  }
+
+  .speakersContainer{
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 48%;
+    .speakerItem{
+      flex-basis: 31%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 5px 20px 30px;
+      height: 360px;
+      border-bottom-left-radius: 91.15px;
+      border-bottom-right-radius: 91.15px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+      background-color: white;
+      text-align: center;
+      .imageContainer{
+        width: 90%;
+        position: relative;
+        height: 140px;
+        img{
+          border-bottom-left-radius: 50%;
+          border-bottom-right-radius: 50%;
+        }
+      }
+
+      h3{
+        font-size: 16px;
+        color: #e87b22;
+        font-weight: 600;
+      }
+
+      p{
+        font-size: 13px;
+        color: lightgray;
+        font-weight: 600;
+      }
+
+      .socialMediaSpeaker{
+        display: flex;
+        align-items: center;
+        gap: 7px;
+      }
+
+    }
+  }
+}

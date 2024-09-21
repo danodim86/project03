@@ -1,0 +1,11 @@
+.mapOfLocationContainer{
+  width: 70%;
+  margin: 250px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  iframe{
+    border: none;
+    border-radius: 50px;
+  }
+}

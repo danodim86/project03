@@ -1,0 +1,265 @@
+.newestBlogsSection {
+  width: 80%;
+  margin: 0 auto;
+
+  .topSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+
+    h2 {
+      font-size: 40px;
+      font-weight: 700;
+    }
+
+    input {
+      width: 25%;
+      padding: 15px 25px;
+      background-color: white;
+      color: gray;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      outline: none;
+      border: none;
+      border-radius: 25px;
+    }
+  }
+
+  .contentContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+    .cardsContainer {
+      flex-basis: 68%;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      .rowOne,
+      .rowTwo {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .cardOneContainer,
+      .cardTwoContainer {
+        flex-basis: 65%;
+        .cardItemInnerContainer{
+          width: 100%;
+          overflow: hidden;
+          height: 300px;
+          border-bottom-left-radius: 200px;
+          border-bottom-right-radius: 200px;
+          display: flex;
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+          transition: padding 0.2s ease, transform 0.2s ease;
+  
+          &:hover {
+            padding: 20px !important;
+  
+            .cardImage {
+              display: none;
+              transition: display 0.2s ease;
+            }
+  
+            .cardContentContainer {
+              width: 100%;
+              padding: 20px;
+              gap: 10px;
+              padding-bottom: 30px;
+              transition: width 0.2s ease;
+              p{
+                display: block;
+                transition: block 0.2s ease;
+              }
+              a{
+                text-align: center;
+              }
+            }
+          }
+  
+          .cardImage {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: block;
+            width: 40%;
+            height: 100%;
+          }
+  
+          .cardContentContainer {
+            width: 60%;
+            height: 100%;
+            padding: 20px 20px 20px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 80px;
+  
+            h3 {
+              font-size: 21px;
+            }
+  
+            p{
+              margin-bottom: 30px;
+              display: none;
+            }
+  
+            a {
+              color: #e87b22;
+              cursor: pointer;
+              text-decoration: underline !important;
+            }
+          }
+        }
+      }
+      .eventOneContainer,
+      .eventTwoContainer {
+        flex-basis: 33%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 20px 25px;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.6);
+          z-index: 1;
+          border-bottom-left-radius: 50%;
+          border-bottom-right-radius: 50%;
+        }
+        h3 {
+          font-size: 20px;
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+        h3, p, a{
+          position: relative;
+          z-index: 4;
+        }
+        .description {
+          font-size: 15px;
+          margin-bottom: 13px;
+        }
+        .month {
+          font-size: 18px;
+        }
+        .day {
+          font-size: 24px;
+          border: 2px solid white;
+          border-radius: 5px;
+          display: inline-block !important;
+          width: auto; /* Ensure width is based on content */
+          max-width: fit-content;
+          padding: 7px 12px;
+          margin-bottom: 13px;
+        }
+        a {
+          font-size: 13px;
+          color: white;
+        }
+      }
+    }
+
+    .jobAdsContainer {
+      flex-basis: 29%;
+      align-items: stretch;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      padding: 30px 20px;
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+      }
+      h3{
+        font-weight: 600;
+        position: relative;
+        z-index: 5;
+        margin-bottom: 40px;
+        margin-top: 20px;
+      }
+      ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        position: relative;
+        z-index: 5;
+        li{
+          display: flex;
+          align-items: center;
+          gap: 7px;
+          div{
+            width: 40px;
+            height: 30px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-size: center;
+          }
+          p{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .dottedPatternContainer{
+    margin-top: 80px;
+    height: 150px;
+    width: 100%;
+    position: relative;
+    .dottedPatternOne, .dottedPatternTwo{
+      background-image: radial-gradient(circle, #696969 1.5px, transparent 1.5px);
+      background-size: 20px 20px;
+      position: absolute;
+      z-index: 3;
+    }
+    .dottedPatternOne{
+      top: 0;
+      bottom: 0;
+      left: -10vw;
+      clip-path: polygon(0% 0%, 65% 0%, 100% 100%, 0% 100%);
+      width: 20vw;
+    }
+    .dottedPatternTwo{
+      top: 0;
+      bottom: 0;
+      right: -10vw;
+      clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%);
+      width: 45vw;
+    }
+  }
+}

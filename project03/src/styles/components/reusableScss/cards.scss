@@ -1,0 +1,172 @@
+.cardsComponentContainer {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 80px auto;
+
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+
+  &.animate {
+    opacity: 1;
+  }
+
+  h2,
+  .cardNum1,
+  .cardNum2,
+  .cardNum3,
+  .cardNum4 {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 1s ease, opacity 1s ease;
+  }
+
+  &.animate {
+    h2 {
+      font-size: 40px;
+      font-weight: 500;
+      margin-bottom: 80px;
+      animation: slideInLeft 1s ease forwards 0.2s;
+    }
+
+    .cardsGrid {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-right: -20px;
+      margin-bottom: -40px;
+
+      .cardItemOuterContainer {
+        flex-basis: 50%;
+      }
+
+      .cardNum1 {
+        animation: slideInLeft 1s ease forwards 0.2s;
+      }
+      .cardNum2 {
+        animation: slideInTop 1s ease forwards 0.2s;
+      }
+      .cardNum3 {
+        animation: slideInBottom 1s ease forwards 0.2s;
+      }
+      .cardNum4 {
+        animation: slideInRight 1s ease forwards 0.2s;
+      }
+
+      .cardItemInnerContainer {
+        width: calc(100% - 20px);
+        overflow: hidden;
+        height: 300px;
+        border-bottom-left-radius: 200px;
+        border-bottom-right-radius: 200px;
+        display: flex;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        margin-right: 20px;
+        margin-bottom: 40px;
+        transition: padding 0.2s ease, transform 0.2s ease;
+
+        &:hover {
+          padding: 20px !important;
+
+          .cardImage {
+            display: none;
+            transition: display 0.2s ease;
+          }
+
+          .cardContentContainer {
+            width: 100%;
+            padding: 20px;
+            gap: 10px;
+            padding-bottom: 30px;
+            transition: width 0.2s ease;
+            p{
+              display: block;
+              transition: block 0.2s ease;
+            }
+            a{
+              text-align: center;
+            }
+          }
+        }
+
+        .cardImage {
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          display: block;
+          width: 40%;
+          height: 100%;
+        }
+
+        .cardContentContainer {
+          width: 60%;
+          height: 100%;
+          padding: 20px 20px 20px 40px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 80px;
+
+          h3 {
+            font-size: 21px;
+          }
+
+          p{
+            margin-bottom: 30px;
+            display: none;
+          }
+
+          a {
+            color: #e87b22;
+            cursor: pointer;
+            text-decoration: underline !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,95 @@
+.aboutSectionOne{
+  width: 80%;
+  margin: 100px auto 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  .upperSection, .lowerSection{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .imageContainer{
+      position: relative;
+      width: 29%;
+      height: 450px;
+      img{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+      }
+    }
+
+    .contentContainer{
+      display: flex;
+      flex-direction: column;
+      width: 65%;
+      h2{
+        font-size: 45px;
+        line-height: 55px;
+        font-weight: 700;
+        margin-bottom: 35px;
+        text-transform: uppercase;
+      }
+      h3{
+        font-size: 35px;
+        font-weight: 400;
+        line-height: 40px;
+        margin-bottom: 45px;
+        width: 70%;
+      }
+      p{
+        font-size: 13px;
+        margin-bottom: 30px;
+      }
+      .missionVisionContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        p{
+          margin: 0;
+        }
+        span{
+          color: #e87b22;
+        }
+      }
+    }
+  }
+
+  .lowerSection{
+    .imageContainer{
+      height: 350px !important;
+      img{
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-top-left-radius: 0% !important;
+        border-top-right-radius: 0% !important;
+      }
+    }
+    .contentContainer{
+      .goalsContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        p{
+          margin: 0;
+        }
+        span{
+          color: #e87b22;
+          text-transform: uppercase !important;
+        }
+      }
+    }
+  }
+
+  .aboutSectionOneDottedPattern{
+    position: absolute;
+    bottom: -17%;
+    left: -10vw;
+    width: 70vw;
+    background-image: radial-gradient(circle, #acacac 2px, transparent 2px);
+    background-size: 20px 20px;
+    height: 150px;
+    clip-path: polygon(0% 0%, 85% 0%, 100% 100%, 0% 100%);
+  }
+}

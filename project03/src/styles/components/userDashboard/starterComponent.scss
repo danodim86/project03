@@ -1,0 +1,153 @@
+.starterComponentUserDashboard{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 202px auto 100px;
+  .userInfoDetailsContainer{
+    flex-basis: 35%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    border-radius: 30px;
+    padding: 25px 30px;
+    .userInfoContainer{
+      flex-basis: 70%;
+      display: flex;
+      flex-direction: column;
+    }
+   
+    .pictureNameContainer{
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      border-bottom: 1px solid lightgray;
+      .pictureNameContainerInner{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+      img{
+        object-fit: cover;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border: 6px solid goldenrod;
+        margin-bottom: 20px;
+      }
+      h2{
+        font-size: 20px;
+        font-weight: 600;
+      }
+      p{
+        font-size: 14px;
+        margin-bottom: 60px;
+      }
+    }
+
+    .occupationCVContainer, .emailPhoneContainer{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-self: flex-start;
+      gap: 15px;
+      padding: 20px 0px 20px 15%; 
+      border-bottom: 1px solid lightgray;
+    }
+
+    .emailPhoneContainer{
+      border: none;
+      padding-bottom: 0px !important;
+    }
+    .occupation, .CV, .phone, .email, .settings{
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      p{
+        font-size: 12px;
+      }
+    }
+
+    .connectIconContainer{
+      flex-basis: 17%;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 10px;
+    }
+  }
+
+  .biographyAndRecommendationsContainer{
+    flex-basis: 62%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    .biography{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+      h2{
+        font-size: 24px;
+        font-weight: 600;
+      }
+      p{
+        font-size: 14px;
+      }
+    }
+    .recommendations{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      h2{
+        font-size: 24px;
+        font-weight: 600;
+      }
+      ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        li{
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        .recommendationUser{
+          display: flex;
+          align-items: center;
+          gap: 15px;
+        }
+        .recommendationName{
+          display: flex;
+          flex-direction: column;
+          h3{
+            font-size: 15px;
+            font-size: 600;
+          }
+          p{
+            font-size: 13px;
+            color: rgb(158, 158, 158);
+          }
+        }
+        img{
+          object-fit: cover;
+          border-bottom-left-radius: 50%;
+          border-bottom-right-radius: 50%;
+        }
+        .recommendationContent{
+          font-size: 14px;
+        }
+      }
+      button{
+        align-self: flex-end;
+        border: none;
+        outline: none;
+        color: lightgray;
+        font-size: 15px;
+        background-color: transparent;
+        cursor: pointer;
+      }
+    }
+  }
+}

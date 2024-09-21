@@ -1,0 +1,369 @@
+.blogItemContentContainer {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  .leftSide {
+    flex-basis: 69%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    position: relative;
+    h2 {
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 55px;
+      margin-bottom: 20px;
+    }
+    .mainTitleContainer {
+      margin-bottom: 30px;
+    }
+    h3 {
+      font-size: 35px;
+      font-weight: 500;
+      line-height: 40px;
+      margin-bottom: 30px;
+    }
+
+    .reactionsAndSocials {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .reactionsContainer {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        .likeIcon,
+        .heartsIcon,
+        .commentIcon {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          img {
+            width: 35px;
+            height: 35px;
+          }
+          span {
+            font-size: 20px;
+          }
+        }
+      }
+      .shareBlogContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 15px 25px;
+        background-color: #e87b22;
+        color: white;
+        border-radius: 38px;
+        ul {
+          list-style: none;
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          li img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+
+    .commentInputContainerOuter {
+      position: relative;
+      width: 100%;
+
+      .dottedPatternForCommentContainer {
+        height: 115px;
+        width: 100vw;
+        left: -10vw;
+        position: absolute;
+        top: 30%;
+        background-image: radial-gradient(circle, #ccc 2px, transparent 2px);
+        background-size: 20px 20px;
+        z-index: 2 !important;
+      }
+      .commentInputContainerInner {
+        position: relative;
+        z-index: 5;
+        background-color: white;
+        height: 250px;
+        width: 100%;
+        border: 3px solid #e87b22;
+        border-radius: 15px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .userComment {
+          position: relative;
+          z-index: 5;
+          width: 100%;
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          .profilePicture {
+            flex-basis: 10%;
+
+            img {
+              width: 60px;
+              height: 60px;
+              border-bottom-left-radius: 50%;
+              border-bottom-right-radius: 50%;
+              object-fit: cover;
+            }
+          }
+          .commentInput {
+            flex-basis: 86%;
+            textarea {
+              width: 100%;
+              max-width: 100%;
+              height: 70px;
+              outline: none;
+              padding: 10px;
+              resize: none;
+              border: none;
+            }
+          }
+        }
+        .paperClipCommentButtonContainer {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .imageContainer {
+            padding-left: 20px;
+            img {
+              width: 30px;
+              height: 30px;
+            }
+          }
+          .buttonContainer {
+            button {
+              border: none;
+              padding: 15px 35px;
+              color: white;
+              border-radius: 35px;
+              background-color: #e87b22;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    .commentSection {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin-top: 20px;
+      h2 {
+        font-size: 50px;
+        font-weight: 500;
+      }
+
+      .commentListContainer {
+        list-style: none;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+      }
+      .commentListContainer li {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .commentContainer {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+        .commentContainer .userContainer {
+          display: flex;
+          gap: 20px;
+          align-items: center;
+          img {
+            width: 70px;
+            height: 70px;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            object-fit: cover;
+          }
+          .nameContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            h3 {
+              font-weight: 700;
+              margin-bottom: 0;
+              font-size: 20px;
+              line-height: 22px;
+            }
+            p {
+              font-size: 14px;
+              color: lightgray;
+            }
+          }
+        }
+
+        .commentContainer .contentContainer {
+          width: 100%;
+          font-size: 14px;
+        }
+
+        .commentContainer .reactionsContainer {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          .likesContainer,
+          .repliesContainer {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            img {
+              width: 20px;
+              height: 20px;
+            }
+            span {
+              font-size: 18px;
+            }
+          }
+        }
+
+        .repliesListContainer {
+          width: 75%;
+          margin-left: 15%;
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          gap: 25px;
+        }
+
+        .repliesListContainer li {
+          display: flex;
+          flex-direction: column;
+          gap: 7px;
+          .replyUserContainer {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            img {
+              width: 60px;
+              height: 60px;
+              border-bottom-left-radius: 50%;
+              border-bottom-right-radius: 50%;
+              object-fit: cover;
+            }
+            .nameContainer {
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+              h3 {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 18px;
+                margin-bottom: 0;
+              }
+              p {
+                font-size: 14px;
+                color: lightgray;
+              }
+            }
+          }
+          .replyContentContainer{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .rightSide {
+    flex-basis: 23%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .imageContainer {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 250px;
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .authorNameContainer {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      h3 {
+        font-weight: 600;
+      }
+      img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+    .authorSocialMediaContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+      padding: 10px 30px;
+      background-color: #e87b22;
+      color: white;
+      border-radius: 39.4px;
+      margin-bottom: 40px;
+      p {
+        font-size: 14px;
+      }
+      .iconsContainer {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        a img {
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+        }
+      }
+    }
+    .subheadingsContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      h3 {
+        width: 100%;
+        border-left: 3px solid #e87b22;
+        padding: 10px 20px;
+        color: #e87b22;
+        font-weight: 600;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        li {
+          padding-left: 23px;
+          font-size: 13px;
+        }
+      }
+    }
+    .dottedPattern {
+      background-image: radial-gradient(circle, #ccc 2px, transparent 2px);
+      background-size: 20px 20px;
+      width: calc(10vw + 18.4vw);
+      position: absolute;
+      left: 0;
+      top: 900px;
+      height: 150px;
+    }
+  }
+}

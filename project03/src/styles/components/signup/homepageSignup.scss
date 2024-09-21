@@ -1,0 +1,27 @@
+.signupHeroSectionHeading{
+  position: absolute;
+  top: 20vh;
+  left: 25vw;
+  padding: 20px;
+  padding-left: 40px;
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 10;
+  width: 35%;
+  h1{
+    font-size: 45px;
+    line-height: 55px;
+  }
+  p{
+    font-size: 15px;
+  }
+  .signupHeroSectionButton{
+    position: absolute;
+    bottom: -30px;
+    right: 10%;
+    z-index: 11;
+  }
+}

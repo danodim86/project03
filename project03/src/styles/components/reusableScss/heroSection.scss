@@ -1,0 +1,113 @@
+.heroSection {
+  margin-top: 102px;
+  position: relative;
+  background-color: #fefefe;
+  height: calc(100vh - 102px);
+  width: 100%;
+
+  .dottedPattern {
+    position: absolute;
+    top: 50%; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle, #ccc 2px, transparent 2px);
+    background-size: 20px 20px; 
+    z-index: 1; 
+    clip-path: polygon(0% 0%, 15% 0%, 15% 50%, 65% 60%, 80% 25%, 90% 25%, 90% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  .heroImageOneContainer{
+    height: 65vh;
+    width: 25%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-image: url("/images/image2.png");
+    background-repeat: none;
+    background-size: cover;
+    background-position:center;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    z-index: 2;
+    transform: scaleX(-1);
+  }
+
+  .heroImageTwoContainer{
+    height: 55vh;
+    width: 40%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-image: url("/images/image1.png");
+    background-repeat: none;
+    background-size: cover;
+    background-position:center;
+    position: absolute;
+    top: 0;
+    right: 10%;
+    z-index: 2;
+  }
+
+  .heroTextContainer{
+    padding: 15px 45px 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    z-index: 3;
+
+    h1{
+      font-size: 45px;
+      margin-bottom: 10px;
+    }
+    p{
+      font-size: 20px;
+    }
+  }
+
+  .heroLoginContainer{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 40px;
+    background-color: white;
+    border-radius: 50px;
+    position: absolute;
+    top: 43%;
+    left: 26%;
+    z-index: 3;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    p{
+      font-weight: 700;
+    }
+    button{
+      font-size: 20px;
+      font-weight: 700;
+      border-radius: 25px;
+    }
+  }
+
+  .heroSocialMediaContainer{
+    background-color: #26363E;
+    position: absolute;
+    right: 0;
+    top: 75%;
+    z-index: 3;
+    padding: 20px 160px 20px 80px;
+    border-top-left-radius: 52px;
+    border-bottom-left-radius: 52px;
+    color: white;
+
+    ul{
+      margin-top: 10px;
+      list-style: none;
+      display: flex;
+      gap: 10px;
+    }
+  }
+}
+
+

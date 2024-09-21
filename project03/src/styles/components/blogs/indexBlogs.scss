@@ -1,0 +1,27 @@
+.dottedPatternContainerBlogs {
+  margin-top: 80px;
+  height: 150px;
+  width: 100%;
+  position: relative;
+  .dottedPatternOne,
+  .dottedPatternTwo {
+    background-image: radial-gradient(circle, #696969 1.5px, transparent 1.5px);
+    background-size: 20px 20px;
+    position: absolute;
+    z-index: 3;
+  }
+  .dottedPatternOne {
+    top: 0;
+    bottom: 0;
+    left: 0vw;
+    clip-path: polygon(0% 0%, 65% 0%, 100% 100%, 0% 100%);
+    width: 20vw;
+  }
+  .dottedPatternTwo {
+    top: 0;
+    bottom: 0;
+    right: 0vw;
+    clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%);
+    width: 45vw;
+  }
+}

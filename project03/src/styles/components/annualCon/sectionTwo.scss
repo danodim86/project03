@@ -1,0 +1,40 @@
+.annualConSectionTwo{
+  width: 100%;
+  height: 180px;
+  margin: 250px 0 180px;
+  position: relative;
+  background-image: radial-gradient(circle, #acacac 2px, transparent 2px);
+  background-size: 20px 20px;
+  .contentContainer{
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    border-radius: 73.5px;
+    display: flex;
+    width: 60%;
+    padding: 40px 55px;
+    justify-content: space-between;
+    align-items: center;
+    .daysContainer, .userContainer, .restaurantContainer, .bookContainer{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .content{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        h3{
+          font-weight: 700;
+          font-size: 26px;
+        }
+        p{
+          font-size: 13px;
+          color: gray;
+        }
+      }
+    }
+  }
+}

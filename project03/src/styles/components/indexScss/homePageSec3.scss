@@ -1,0 +1,154 @@
+.homePageSec3Container {
+  position: relative;
+  width: 80%;
+  height: 100vh;
+  margin: 150px auto 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+
+  &.animate {
+    opacity: 1;
+  }
+
+  .contentLeftSideContainer,
+  .dottedPatternContainer,
+  .contentRightSideContainer,
+  .buyTicketContainer,
+  .imageContainerOuter {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 1s ease, opacity 1s ease;
+  }
+
+  &.animate {
+    .contentLeftSideContainer {
+      display: flex;
+      flex-direction: column;
+      width: 35vw;
+      margin-top: 100px;
+      animation: slideInLeft 1s ease forwards 0.2s;
+
+      h2 {
+        font-size: 46px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        line-height: 45px;
+      }
+      p {
+        font-size: 14px;
+        color: gray;
+        margin-bottom: 40px;
+      }
+      .presidentContainer {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .presidentImageContainer {
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          width: 60px;
+          height: 60px;
+          border-radius: 30px;
+        }
+        .presidentInfoContainer {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 5px;
+
+          h3 {
+            font-size: 15px;
+            font-weight: 600;
+          }
+          p {
+            font-size: 13px;
+            font-weight: 600;
+            color: lightgray;
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .dottedPatternContainer {
+      position: absolute;
+      z-index: 2;
+      bottom: 2%;
+      left: -10vw;
+      background-image: radial-gradient(circle, #696969 1px, transparent 1px);
+      background-size: 20px 20px;
+      height: 40vh;
+      width: 50vw;
+      clip-path: polygon(0% 0%, 10% 0%, 10% 60%, 85% 60%, 100% 100%, 0% 100%);
+      animation: slideInLeft 1s ease forwards 0.2s;
+    }
+
+    .contentRightSideContainer {
+      height: 85vh;
+      width: 28vw;
+      border-radius: 10vw;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      animation: slideInRight 1s ease forwards 0.2s;
+
+      .imageContainerOuter {
+        position: absolute;
+        top: 0%;
+        left: -20%;
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        border: 1px solid gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: slideInRight 1s ease forwards 0.2s;
+
+        .imageContainerInner {
+          width: 90px;
+          height: 90px;
+          border-radius: 45px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+
+      .buyTicketContainer { 
+        bottom: 10%;
+        right: -20%;
+      }
+    }
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

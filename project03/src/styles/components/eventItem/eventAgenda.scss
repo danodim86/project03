@@ -1,0 +1,79 @@
+.eventAgendaContainer {
+  margin: 150px auto;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  h2 {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 500;
+  }
+
+  .contentAndPatternContainer {
+    display: flex;
+    .contentContainer {
+      flex-basis: 82%;
+      display: flex;
+      flex-direction: column;
+      .agendaDate {
+        width: 85%;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #e87b22;
+        font-size: 20px;
+        margin-bottom: 50px;
+      }
+
+      .redLine {
+        width: 80%;
+        height: 2px;
+        background-color: #e87b22;
+        margin: 30px 0;
+      }
+
+      .firstHalf,
+      .secondHalf {
+        width: 100%;
+        ul {
+          list-style-type: none;
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+          li {
+            display: flex;
+            gap: 40px;
+            h3 {
+              font-size: 20px;
+              font-weight: 600;
+              border-left: 3px solid #e87b22;
+              padding-left: 20px;
+              margin-bottom: 20px;
+              line-height: 20px;
+            }
+            ul {
+              list-style-type: disc !important;
+              padding-left: 20px;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              li {
+                display: list-item;
+                span {
+                  color: #e87b22;
+                  font-weight: 700;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .dottedPatternAgendaContainer {
+      background-image: radial-gradient(circle, #acacac 2px, transparent 2px);
+      background-size: 20px 20px;
+      flex-basis: 15%;
+    }
+  }
+}
