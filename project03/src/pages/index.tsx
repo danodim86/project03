@@ -13,6 +13,8 @@ import CardsComponent from "@/components/reusable/CardsComponent";
 import HomepageSec3 from "@/components/index/HomepageSec3";
 import HomepageSec4 from "@/components/index/HomepageSec4";
 import { BlogsCardData, CarouselItemData } from "@/interfaces/types";
+import { useEffect, useState } from "react";
+import Popup from "@/components/index/Popup";
 
 
 interface Props {
@@ -26,6 +28,38 @@ export default function Home({
   homepageCards,
   homepageCardsSet1,
 }: Props) {
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupTitle, setPopupTitle] = useState("");
+  const [popupDate, setPopupDate] = useState("");
+
+  useEffect(() => {
+    // Trigger popup after 3 seconds
+    const timer = setTimeout(async () => {
+      try {
+        const randomId = Math.floor(Math.random() * 16) + 1; 
+        const response = await fetch(
+          `https://json-server-project03.onrender.com/eventsPosts/${randomId}`
+        );
+        const eventData = await response.json();
+        console.log("Fetched data:", eventData);
+
+        const eventTitle = `${eventData.categories[0]}: ${eventData.title}`;
+        const eventDate = eventData.date; 
+
+        setPopupTitle(eventTitle);
+        setPopupDate(eventDate);
+
+        setShowPopup(true);
+        console.log("bidelo e");
+      } catch (error) {
+        console.error("Failed to fetch event post:", error);
+      }
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const closePopup = () => setShowPopup(false);
   return (
     <>
       <Head>
@@ -102,6 +136,10 @@ export default function Home({
       <HomepageSec3 />
       <CardsComponent title="Популарни истражувања" data={homepageCardsSet1} />
       <HomepageSec4 />
+
+      {showPopup && (
+        <Popup title={popupTitle} date={popupDate} onClose={closePopup} />
+      )}
     </>
   );
 }
